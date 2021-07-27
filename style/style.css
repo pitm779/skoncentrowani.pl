@@ -7,6 +7,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #fdfdfc;
+    color: #070928;
 }
 
 .container {
@@ -16,12 +17,16 @@ body {
     border: 1px solid #eeeeee;
 }
 
+h1, h2, h3 {
+    color: #2873ff;
+}
 
 /* nawigacja */
 .nav {
     position: fixed;
     width: 100%;
     border-bottom: 3px #3456ff solid;
+    border-radius: 3px;
     box-shadow: 0 2px 8px #000;
     background-color: #fff;
 }
@@ -42,7 +47,7 @@ body {
     font-size: 2rem;
     font-weight: 400;
     padding: 18px 0;
-    color: #000;
+    color: #070928;
     text-decoration: none;
 }
 
@@ -57,16 +62,17 @@ body {
 
 .nav-ul li {
     padding: 6px 0;
-    border-bottom: 2px solid transparent;
+    border-bottom: 3px solid transparent;
 }
 
 .nav-ul li:hover {
-    border-bottom: 2px solid #2873ff;
+    border-bottom: 3px solid #2873ff;
+    border-radius: 3px;
 }
 
 .nav-ul li a {
     text-decoration: none;
-    color: black;
+    color: #070928;
     font-size: 1.3rem;
 }
 
@@ -86,7 +92,7 @@ body {
 .nav-burger {
     width: 40px;
     height: 4px;
-    background: #000;
+    background: #070928;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(255,101,47,.2);
     transition: all .5s ease-in-out;
@@ -97,7 +103,7 @@ body {
     position: absolute;
     width: 40px;
     height: 4px;
-    background: #000;
+    background: #070928;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(255,101,47,.2);
     transition: all .5s ease-in-out;
@@ -125,7 +131,7 @@ body {
 /* landing page */
 .main {
     padding-top: 93px;
-    height: 1000px;
+    height: 1500px;
 }
 
 .landing-page {
@@ -154,11 +160,29 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 50px;
-    height: 1000px;
-
+    padding: 40px 10px 0 10px;
+    /* height: 1000px; */
 }
 
+h2 {
+    font-size: 2rem;
+}
+
+/* footer */
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* media */
+@media screen and (orientation: portrait) and (max-width: 960px){
+    .landing-page {
+        background-size: contain;
+        height: 300px;
+    }
+}
 
 @media screen and (orientation: landscape) and (max-width: 850px) {
     .nav {
@@ -171,6 +195,7 @@ body {
 
     .landing-page {
         background-size: contain;
+        height: 400px;
     }
 }
 
@@ -193,5 +218,14 @@ body {
 
     .nav-ul.show {
         width: 30%;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    .contact {
+        flex-direction: row;
+        justify-content: space-around;
     }
 }
