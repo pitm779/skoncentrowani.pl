@@ -14,7 +14,7 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="style/style.css" />
-		<script defer src="https://kit.fontawesome.com/b3867500a4.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://unpkg.com/@tabler/icons@latest/iconfont/tabler-icons.min.css">
 	</head>
 	<body>
 		<nav class="nav">
@@ -24,16 +24,16 @@
 					<div class="nav-burger"></div>
 				</a>
 				<ul class="nav-ul" id="nav-ul">
-					<!-- <li><a href="#home">Głowna</a></li> -->
 					<li><a href="#info">Informacje</a></li>
 					<li><a href="#about">O nas</a></li>
+					<li><a href="#office">Gabinet</a></li>
 					<li><a href="#contact">Kontakt</a></li>
 				</ul>
 			</div>
 		</nav>
 		<main class="main">
-			<section class="landing-page container"></section>
-			<section class="about container">
+			<div class="landing-page container"></div>
+			<section class="about text-whitespace container">
 				<h2>Terapia Biofeedback</h2>
 				<p>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nam ex
@@ -49,32 +49,40 @@
 					adipisci animi eos quos. Excepturi molestias nam eius tempore?
 				</p>
 			</section>
+			<section class="office container" id="office">
+				<div class="office-text text-whitespace">
+					<h2>Nasz Gabinet</h2>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non quasi culpa voluptates quisquam qui dignissimos harum dicta sequi eos dolore blanditiis repudiandae, aliquid suscipit id ullam, ratione eveniet tenetur debitis.</p>
+				</div>
+				<img class="office-foto" src="./image/office2.jpg" alt="Zdjęcie gabinetu">
+			</section>
 		</main>
+
 		<footer class="footer" id="contact">
 			<div class="contact container">
-				<div class="adres-box">
-					<i class="fas fa-map-marker-alt"></i>
+				<a class="adres-box" href="https://g.page/skoncentrowani-pl?share" target="_blank">
+					<i class="ti ti-map-pin"></i>
 					<p>
 						Jelenia Góra, ul.Wolności 150<br />(budynek metalowca)<br />IIp.,
 						pok 17
 					</p>
-				</div>
+				</a>
 				<div class="contact-box">
 					<div>
-						<i class="fas fa-phone-alt"></i>
+						<i class="ti ti-phone"></i>
 						<p>575 860 630</p>
-						<i class="fas fa-phone-alt"></i>
+						<i class="ti ti-phone"></i>
 						<p>600 382 431</p>
 					</div>
 					<div>
-						<i class="fas fa-envelope"></i>
+						<i class="ti ti-mail"></i>
 						<p>skoncentrowani@gmail.com</p>
 					</div>
 				</div>
-				<div class="social-box">
-					<i class="fab fa-facebook-f"></i>
+				<a class="social-box" href="https://www.facebook.com/Skoncentrowanipl-125836232249318/?ref=page_internal" target="_blank">
+					<i class="ti ti-brand-facebook"></i>
 					<p>@Skoncentrowani.pl</p>
-				</div>
+				</a>
 				<div class="foot"><p>© 2021 Skoncentrowani.pl</p></div>
 			</div>
 		</footer>

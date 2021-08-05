@@ -15,8 +15,9 @@ body {
 }
 
 .container {
-    margin: 0 auto;
+    margin: 10px auto;
     width: 95%;
+    min-width: 320px;
     background-color: #fff;
     border: 1px solid #eeeeee;
 }
@@ -24,6 +25,10 @@ body {
 h1, h2, h3 {
     color: #2873ff;
     letter-spacing: 1px;
+}
+
+.text-whitespace {
+    padding: 10px;
 }
 
 /* nawigacja */
@@ -37,6 +42,7 @@ h1, h2, h3 {
 }
 
 .nav .container {
+    margin: 0 auto;
     border: none;
 }
 
@@ -50,7 +56,7 @@ h1, h2, h3 {
 
 .nav-logo {
     padding: 18px 0;
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 400;
     color: #070928;
     text-decoration: none;
@@ -76,7 +82,7 @@ h1, h2, h3 {
 }
 
 .nav-ul li a {
-    font-size: 1.3rem;
+    font-size: 20px;
     color: #070928;
     text-decoration: none;
     letter-spacing: 1px;
@@ -136,8 +142,8 @@ h1, h2, h3 {
 
 /* landing page */
 .main {
-    padding-top: 93px;
-    height: 1500px;
+    padding-top: 80px;
+    /* height: 1500px; */
 }
 
 .landing-page {
@@ -151,28 +157,38 @@ h1, h2, h3 {
     background-size: cover;
 }
 
-.landing-page-shadow {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 50%;
-    height: 70px;
-    background-color: rgba(225, 225, 225, 0.8);
-}
-
 /* about */
 .about {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px 10px 0 10px;
+    /* padding: 40px 10px 0 10px; */
     /* height: 1000px; */
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 32px;
 }
+
+/* office */
+.office {
+    display: flex;
+    flex-direction: column;
+}
+
+.office-text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 200px;
+}
+
+.office-foto {
+    width: 100%;
+    padding: 10px;
+    border-radius: 30px;
+}
+
 
 /* footer */
 .contact {
@@ -186,6 +202,8 @@ h2 {
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    text-decoration: none;
+    color: #070928;
 }
 
 .contact-box {
@@ -208,7 +226,7 @@ h2 {
 
 .contact-box i, .adres-box i, .social-box i {
     padding: 10px;
-    font-size: 25px;
+    font-size: 30px;
     color: #2873ff;
 }
 
@@ -236,12 +254,20 @@ h2 {
     }
 
     .main {
-        padding-top: 16px;
+        padding-top: 3px;
     }
 
     .landing-page {
         height: 400px;
         background-size: contain;
+    }
+
+    .office {
+        flex-direction: row;
+    }
+
+    .office-foto, .office-text {
+        width: 50%;
     }
 
     .contact {
@@ -262,7 +288,7 @@ h2 {
 
 @media screen and (min-width: 960px) {
     .container {
-        margin: 0 auto;
+        margin: 10px auto;
         width: 960px;
     }
 
@@ -270,7 +296,7 @@ h2 {
         display: flex;
         justify-content: space-between;
         flex-direction: row;
-        width: 30%;
+        width: 40%;
     }
 
     .nav-btn {
@@ -278,11 +304,19 @@ h2 {
     }
 
     .nav-ul.show {
-        width: 30%;
+        width: 40%;
     }
 
     h2 {
-        font-size: 2.2rem;
+        font-size: 35px;
+    }
+
+    .office {
+        flex-direction: row;
+    }
+
+    .office-foto, .office-text {
+        width: 50%;
     }
 
     .contact {
