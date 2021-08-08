@@ -23,12 +23,17 @@ body {
 }
 
 h1, h2, h3 {
+    padding: 8px 0;
     color: #2873ff;
     letter-spacing: 1px;
 }
 
 .text-whitespace {
     padding: 10px;
+}
+
+section, footer {
+    scroll-margin-top: 80px;
 }
 
 /* nawigacja */
@@ -143,18 +148,17 @@ h1, h2, h3 {
 /* landing page */
 .main {
     padding-top: 80px;
-    /* height: 1500px; */
 }
 
 .landing-page {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 600px;
-    background-image: url(../image/baner.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: 180px;
+}
+
+.landing-page img {
+    height: 100%;
 }
 
 /* about */
@@ -162,8 +166,6 @@ h1, h2, h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* padding: 40px 10px 0 10px; */
-    /* height: 1000px; */
 }
 
 h2 {
@@ -241,14 +243,59 @@ h2 {
 
 
 /* media */
-@media screen and (orientation: portrait) and (max-width: 960px){
+@media screen and (min-width: 768px) {
+    .office {
+        flex-direction: row;
+    }
+
+    .office-foto, .office-text {
+        width: 50%;
+    }
+
+    .nav-ul {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 384px;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .nav-ul.show {
+        width: 40%;
+    }
+
     .landing-page {
-        height: 300px;
-        background-size: contain;
+        height: 400px;
+    }
+
+    .contact {
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .contact-box, .adres-box, .social-box {
+        width: 280px;
+        height: 120px;
     }
 }
 
-@media screen and (orientation: landscape) and (max-width: 960px) {
+@media screen and (orientation: portrait) and (min-width: 500px) and (max-width: 768px){
+    .landing-page {
+        height: 300px;
+    }
+}
+
+@media screen and (orientation: portrait) and (min-width: 320px) and (max-width: 500px) {
+    .landing-page {
+        height: 50vw;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-width: 768px) {
     .nav {
         position: static;
     }
@@ -258,8 +305,7 @@ h2 {
     }
 
     .landing-page {
-        height: 400px;
-        background-size: contain;
+        height: 350px;
     }
 
     .office {
@@ -286,47 +332,23 @@ h2 {
     }
 }
 
+@media screen and (orientation: landscape) and (max-width: 600px) {
+    .landing-page {
+        height: 50vw;
+    }
+}
+
 @media screen and (min-width: 960px) {
     .container {
         margin: 10px auto;
         width: 960px;
     }
-
-    .nav-ul {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-        width: 40%;
-    }
-
-    .nav-btn {
-        display: none;
-    }
-
-    .nav-ul.show {
-        width: 40%;
-    }
-
+    
     h2 {
         font-size: 35px;
     }
 
-    .office {
-        flex-direction: row;
-    }
-
-    .office-foto, .office-text {
-        width: 50%;
-    }
-
-    .contact {
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-
-    .contact-box, .adres-box, .social-box {
-        width: 280px;
-        height: 120px;
+    .landing-page {
+        height: 570px;
     }
 }
